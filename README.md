@@ -11,3 +11,8 @@ Expected features on the web mobile SSR:
 - [ ] Async/Loadable
 - [ ] Routing
 - [ ] Custom Headers
+
+To be tested:
+
+- [ ] Performance
+- [ ] Layouting/Templating
