@@ -2,7 +2,7 @@
 
 Expected features on the web mobile SSR:
 
-- [ ] Health Checks (liveness, readyness)
+- [x] Health Checks (liveness, readyness)
 - [ ] Logs
 - [ ] Metrics
 - [ ] rendering (HTML, styles, store)
