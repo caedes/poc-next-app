@@ -1,15 +1,38 @@
 {
-  "name": "poc-next-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   },
   "dependencies": {
     "next": "9.1.4",
     "react": "16.12.0",
     "react-dom": "16.12.0"
-  }
+  },
+  "devDependencies": {
+    "git-cz": "^3.3.0",
+    "husky": ">=1",
+    "lint-staged": ">=8",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "name": "poc-next-app",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "format": "prettier --write \"{pages,components}/**/*.js\"",
+    "start": "next start"
+  },
+  "version": "0.1.0"
 }
